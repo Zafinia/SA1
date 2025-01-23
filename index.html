@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>This is my resume</title>
+  <link rel="stylesheet" href="SA2 styles.css">
+  <script src="script.js"></script>
+</head>
+<script>
+  var colors = ["black","white"];
+    var colorIndex = 0;
+    function changeColor() {
+        var col = document.getElementById("body");
+        var res = document.getElementById("container")
+        if( colorIndex >= colors.length ) {
+            colorIndex = 0;
+        }
+        col.style.backgroundColor = colors[colorIndex];
+        res.style.backgroundColor = colors[colorIndex];
+        if (colors[colorIndex]=="white") {
+          document.getElementById("content").style.color = "black";
+        }
+        if (colors[colorIndex]=='black') {
+          document.getElementById("content").style.color = "red";
+          document.getElementById("container").style.boxShadow = "0 0 20px red";
+          document.getElementById("image-container").style.boxShadow = "0 0 20px red";
+        }
+        if (colors[colorIndex]=='white') {
+          document.getElementById("content").style.color = "#d62687";
+          document.getElementById("container").style.boxShadow = "0 0 20px #d62687";
+          document.getElementById("image-container").style.boxShadow = "0 0 20px #d62687";
+        }
+        colorIndex++;
+    }
+</script>
+<body id="body">
+  <div id="container">
+    <div id="image-container">
+      <img src="1x1 pic.jpg" width="400" height="500">
+    </div>
+    <div id="content">
+      <h2><u>Reneanne Claire O. Guilas</u></h2>
+      <p><sup>Web Designer</sup></p>
+      <p><b>Profile</b></p>
+      <p> An ambitious program designer with a passion for creating original and new designs, who would like to join a team of like minded designers. Although new to the field I am eager to learn and make use of the best of my abilities to contribute to the team.</p>
+      <p> Address:</p><p> Blk 7 Lot 39 Ephesus St. North Olympus Nova. Q.C.</p>
+      <p> Email:</p> <a href="mailto:202310116@feudiliman.edu.ph"> ReneanneGuilas@gmail.com </a>
+      <p><b> Skills </b></p>
+      <ul> 
+        <li> Web design</li>
+        <li> Communication skills</li>
+        <li> Quick and Efficient</li>
+        <li> Organized</li>
+        <li> Good at documenting</li>
+      </ul>
+      <p><b> Education</b></p>
+      <ol>
+        <li> <br>Kindergarten</br>
+          Saint Jean the Baptist of Reim College <i>2009-2010</i> </li>
+        <li> <br> Primary</br> Mater Carmeli School <i>2011 - 2016</i></li>
+        <li> <br> High School</br> Mater Carmeli School <i>2017 - 2022</i></li>
+        <li> <br> College</br> Far Eastern University - Diliman <i>2023 - 2024</i></li>
+      </ol>
+      <p><b> Career </b></p>
+      <ol> 
+        <li> Documentation Specialist for the "Student Management System"</li>
+        <li> Documentation Specialist for Group "D-Cypher" </li>
+      </ol>
+      <p> For this resume I used some basic tags such as the paragraphs, line breaks, and ordered and unorded list. After that I used CSS to put it in a container to make it look more appealing. Lastly I added an "mailto:" to create the link for my email address. A simple resume that made use of what I have learned from module one up to the current module.</p>
+     
+    </div>
+  </div>
+  <button onclick="changeColor();">Change color</button>
+</body>
+</html>
